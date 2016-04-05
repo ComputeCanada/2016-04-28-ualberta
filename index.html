@@ -49,12 +49,6 @@ eventbrite: 24432926541      # optional (insert the alphanumeric key for Eventbr
 </iframe>
 {% endif %}
 
-<h4>This is the workshop template.  Use it to create your own website.
-Delete this line and email the link to your workshop page to admin@software-carpentry.org.
-If this is a self organized workshop, please be sure to include any other details
-Software Carpentry staff may need to know in your email.</h4>
-
-
 <h2 id="general">General Information</h2>
 
 <!--
@@ -89,9 +83,8 @@ Software Carpentry staff may need to know in your email.</h4>
 -->
 <p id="who">
   <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
-  <strong>You don't need to have any previous knowledge of the tools that will
-    be presented at the workshop.</strong>
+  The course is aimed at graduate students and other researchers in the humanities since it will focus on text manipulation but people from any disciplinary background are welcome. 
+  <strong>No previous knowledge of the tools that will be presented at the workshop is needed.</strong>
 </p>
 
 <!--
@@ -164,7 +157,7 @@ Software Carpentry staff may need to know in your email.</h4>
 -->
 <p id="contact">
   <strong>Contact</strong>:
-  Please mail
+  Please email
   {% if page.contact %}
     <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
   {% else %}
@@ -197,20 +190,20 @@ Software Carpentry staff may need to know in your email.</h4>
       <tr> <td>09:00</td>  <td>Automating tasks with the Unix shell</td> </tr>
       <tr> <td>10:30</td> <td>Coffee</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Building programs with Python</td> </tr>
+      <tr> <td>13:00</td>  <td>Sharing & Version control with Git & GitHub</td> </tr>
       <tr> <td>14:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>16:00</td>  <td>End Day 1</td> </tr>
     </table>
   </div>
   <div class="col-md-6">
     <h3>Day 2</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Version control with Git</td> </tr>
+      <tr> <td>09:00</td>  <td>Building programs with Python, part 1</td></td> </tr>
       <tr> <td>10:30</td>  <td>Coffee</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Managing data with SQL</td> </tr>
+      <tr> <td>13:00</td>  <td>Building programs with Python, part 2</td> </tr>
       <tr> <td>14:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>16:00</td>  <td>End Day 2</td> </tr>
     </table>
   </div>
 </div>
@@ -257,6 +250,14 @@ Software Carpentry staff may need to know in your email.</h4>
   'tools/check' as well.
 -->
 <h2 id="syllabus">Syllabus</h2>
+
+<p>Note that the content listed here are links to the standard Software Carpentry class, which is an <emph>ideal</emph> 
+rather than something that actually happens because there simply isn't enough time over two days to cover it all.  
+What will happen is that your instructor will basically follow the high-level goals of each section but with shifts to 
+the content and the emphasis; in particular, this workshop will focus on <emph>text manipulation and Twitter data</emph>.  
+The end result will be divergence from what is highlighted here but as a result you will have 
+two examples to work from: what you did in class and what is summarized in the sections shared here.</p>
+
 
 <div class="row">
   <div class="col-md-6">
@@ -327,6 +328,7 @@ Software Carpentry staff may need to know in your email.</h4>
       <li><a href="{{site.swc_githubio}}/git-novice/reference.html">Reference...</a></li>
     </ul>
   </div>
+  <!--
   <div class="col-md-6">
     <h3 id="syllabus-sql">Managing Data with SQL</h3>
     <ul>
@@ -341,6 +343,7 @@ Software Carpentry staff may need to know in your email.</h4>
       <li><a href="{{site.swc_githubio}}/sql-novice-survey/reference.html">Reference...</a></li>
     </ul>
   </div>
+  -->
 </div>
 
 <hr/>
@@ -382,50 +385,12 @@ Software Carpentry staff may need to know in your email.</h4>
     <div class="col-md-4">
       <h4 id="shell-windows">Windows</h4>
       <ol>
-        <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>
-        <li>Run the installer and follow the steps bellow:
-          <ol>
-            <!-- Git 2.6.1 Setup -->
-            <!-- Welcome to the Git Setup Wizard -->
-            <li>Click on "Next".</li>
-            <!-- Information -->
-            <li>Click on "Next".</li>
-            <!-- Select Destination Location -->
-            <li>Click on "Next".</li>
-            <!-- Select Components -->
-            <li>Click on "Next".</li>
-            <!-- Select Start Menu Folder -->
-            <li>Click on "Next".</li>
-            <!-- Adjusting your PATH environment -->
-            <li>
-              <strong>
-                Select "Use Git from the Windows Command Prompt" and click on "Next".
-              </strong>
-                If you forgot to do this programs that you need for the workshop will not work properly.
-                If this happens rerun the installer and select the appropriate option.
-            </li>
-            <!-- Configuring the line ending conversions -->
-            <li>
-              Click on "Next".
-              <strong>
-                Keep "Checkout Windows-style, commit Unix-style line endings" selected.
-              </strong>
-            </li>
-            <!-- Configuring the terminal emulator to use with Git Bash -->
-            <li>
-              <strong>
-                Select "Use Windows' default console window" and click on "Next".
-              </strong>
-            </li>
-            <!-- Configuring experimental performance tweaks -->
-            <li>Click on "Next".</li>
-            <!-- Installing -->
-            <!-- Completing the Git Setup Wizard -->
-            <li>Click on "Finish".</li>
-          </ol>
-        </li>
+        <li>Download the MobaXterm <a href="http://mobaxterm.mobatek.net/MobaXterm_Setup_8.6.msi">installer</a>.</li>
+        <li>Run the installer.<\li>
+        <li>Open the program.  If there are no errors then you can assume that it was installed properly and close it.</li>
       </ol>
-      <p>This will provide you with both Git and Bash in the Git Bash program.</p>
+      <p>This will provide you with the free home edition of MobaXterm, a tool that provides a very nice command-line shell
+      within Windows.  We will review how to use MobaXterm in class.</p>
     </div>
     <div class="col-md-4">
       <h4 id="shell-macosx">Mac OS X</h4>
@@ -460,15 +425,26 @@ Software Carpentry staff may need to know in your email.</h4>
     on <a href="https://github.com/">github.com</a>. You will need a
     <a href="https://help.github.com/articles/supported-browsers/">supported</a>
     web browser (current versions of Chrome, Firefox or Safari,
-    or Internet Explorer version 9 or above).
+    or Internet Explorer version 9 or above).  While we will be installing Git on your system our focus will be 
+    on GitHub and the GUI (Graphic User Interface) tools that are provided for working with it.
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="git-windows">Windows</h4>
       <p>
-        Git should be installed on your computer as part of your Bash
-        install (described above).
+        We will install Git within MobaXterm during lunch on the first day.  This is fairly straightforward to do.
+        If you would like a headstart on this then <a href="http://mobaxterm.mobatek.net/plugins/Git.mxt3">download 
+        the Git plugin for MobaXterm</a> and place it in the same directory as the MobaXterm executable 
+        (should be in "C:\Program Files (x86)\Mobatek\MobaXterm Personal Edition\").
+      </p>
+      <p>
+        You need to create a GitHub account.  This can be done by visiting <a href="https://github.com/">https://github.com/</a>
+        and using the account creation feature as you would for any website.
+      </p>
+      <p>
+        You need to install the GitHub Desktop Tool.  You can find the download at <a href="https://desktop.github.com/">https://desktop.github.com/</a>.
+        Download the tool and install it.
       </p>
     </div>
     <div class="col-md-4">
@@ -483,6 +459,14 @@ Software Carpentry staff may need to know in your email.</h4>
         most recent available installer labelled "snow-leopard"
         <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>.
       </p>
+      <p>
+        You need to create a GitHub account.  This can be done by visiting <a href="https://github.com/">https://github.com/</a>
+        and using the account creation feature as you would for any website.
+      </p>
+      <p>
+        You need to install the GitHub Desktop Tool.  You can find the download at <a href="https://desktop.github.com/">https://desktop.github.com/</a>.
+        Download the tool and install it.
+      </p>
     </div>
     <div class="col-md-4">
       <h4 id="git-linux">Linux</h4>
@@ -491,6 +475,14 @@ Software Carpentry staff may need to know in your email.</h4>
         install it via your distro's package manager. For Debian/Ubuntu run
         <code>sudo apt-get install git</code> and for Fedora run
         <code>sudo yum install git</code>.
+      </p>
+      <p>
+        You need to create a GitHub account.  This can be done by visiting <a href="https://github.com/">https://github.com/</a>
+        and using the account creation feature as you would for any website.
+      </p>
+      <p>
+        Unfortunately there is no GitHub Desktop Tool for Linux.  Not to worry, we will make sure that you are able to use
+        the git commandline tool to access GitHub.
       </p>
     </div>
   </div>
